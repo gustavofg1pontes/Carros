@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="TAXI_CLEAN_ALLD0000" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0000.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0002" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0002.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0003" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0003.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0004" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0004.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0005" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0005.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0006" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0006.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0007" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0007.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0008" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0008.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0009" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0009.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0010" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0010.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0011" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0011.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0012" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0012.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0013" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0013.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0014" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0014.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0015" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0015.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0016" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0016.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0017" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0017.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0018" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0018.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0019" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0019.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0020" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0020.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0021" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0021.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0022" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0022.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0023" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0023.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0024" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0024.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0025" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0025.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0026" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0026.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0027" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0027.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0028" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0028.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0029" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0029.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0030" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0030.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0031" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0031.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0032" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0032.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0033" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0033.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0034" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0034.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0035" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0035.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0036" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0036.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0037" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0037.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0038" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0038.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0039" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0039.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0040" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0040.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0041" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0041.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0042" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0042.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0043" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0043.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0044" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0044.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0045" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0045.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0046" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0046.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TAXI_CLEAN_ALLD0047" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TAXI_CLEAN_ALLD0047.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>
