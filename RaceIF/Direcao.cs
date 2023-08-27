@@ -10,7 +10,8 @@ namespace RaceIF
     {
         private float _angulo;
         private bool _power;
-        public Vector2 VetorVisao { get; set; }
+
+        public Vector2 VetorDirecao;
         public Acelerador Acelerador { get; }
         public Freio Freio { get; set; }
         public Cambio Cambio { get; set; }
@@ -25,7 +26,7 @@ namespace RaceIF
             Cambio = new Cambio();
             Acelerador = new Acelerador();
             Freio = new Freio();
-            VetorVisao = new Vector2(1, 0);
+            VetorDirecao = VectorUtils.CreateVectorFromScalarAndAngle(1, 0);
         }
 
         private Roda RodaFrontalDireita { get; set; }
@@ -62,37 +63,34 @@ namespace RaceIF
             _power = false;
         }
 
+        public void AtualizarVetorDirecao()
+        {
+            this.VetorDirecao = VectorUtils.CreateVectorFromScalarAndAngle(1, VectorUtils.AngleFromVector(this.Acelerador.VetorVel));
+        }
+
         public void Acelerar()
         {
             if (!_power) return;
-            Acelerador.Acelerar(1, _angulo);
-            Cambio.TrocarMarcha(Acelerador.Velocidade);
+            Acelerador.Acelerar(1, VectorUtils.AngleFromVector(VetorDirecao));
+            Cambio.TrocarMarcha(VectorUtils.CalculateMagnitude(Acelerador.VetorVel));
         }
 
         public void Desacelerar()
         {
             if (!_power) return;
-            if (Cambio.MarchaIndex > 1)
+            if (Cambio.MarchaIndex > 0)
             {
-                Frear(2);
+                Frear(.5f);
                 return;
             }
             // todo ré
         }
 
-        public void Frear(int vel)
+        public void Frear(float vel)
         {
             Freio.Acionado = true;
-            if (Acelerador.Velocidade > 0)
-            {
-                Acelerador.Desacelerar(vel, _angulo);
-                if (Acelerador.Velocidade < 0) Acelerador.Velocidade = 0;
-            }
-            else
-            {
-                Acelerador.Acelerar(vel, _angulo);
-                if (Acelerador.Velocidade > 0) Acelerador.Velocidade = 0;
-            }
+            Acelerador.Desacelerar(vel, VectorUtils.AngleFromVector(VetorDirecao));
+            
 
             Freio.Acionado = false;
         }

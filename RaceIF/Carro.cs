@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Numerics;
 
 namespace RaceIF
 {
@@ -12,7 +13,6 @@ namespace RaceIF
         public int Ano;
         public bool Ligado;
         public Direcao Direcao { get; }
-        public bool Acelerando = false;
         public int PosX;
         public int PosY;
 
@@ -86,9 +86,11 @@ namespace RaceIF
             PosX += (int)(Direcao.Acelerador.VetorVel.X);
             PosY += (int)(Direcao.Acelerador.VetorVel.Y);
 
-            Direcao.VetorVisao = VectorUtils.AddAngles(Direcao.VetorVisao, Direcao.Angulo);
             Direcao.Acelerador.UpdateVetorAceleracao(Direcao.Angulo);
             Direcao.Acelerador.UpdateVetorVel(Direcao.Angulo);
+
+            if(VectorUtils.CalculateMagnitude(Direcao.Acelerador.VetorVel) > 0)
+                Direcao.AtualizarVetorDirecao();
 
             // calcular o sprite correto de acordo com a direção
             double ang = VectorUtils.AngleFromVector(Direcao.Acelerador.VetorVel);
@@ -107,7 +109,7 @@ namespace RaceIF
 
         public void Stop()
         {
-            if (!Ligado || Direcao.Acelerador.Velocidade != 0 || Direcao.Cambio.MarchaIndex != 0) return;
+            if (!Ligado || VectorUtils.CalculateMagnitude(Direcao.Acelerador.VetorVel) != 0 || Direcao.Cambio.MarchaIndex != 0) return;
             Ligado = false;
             Direcao.Stop();
         }

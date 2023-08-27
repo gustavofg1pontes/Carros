@@ -20,7 +20,7 @@ namespace RaceIF
         {
             if (IsUpPressed)
             {
-                Carro.Direcao.Acelerar();   
+                Carro.Direcao.Acelerar();
             }
             if (IsLeftPressed)
             {
@@ -52,10 +52,11 @@ namespace RaceIF
                     Carro.Direcao.ResetarAngulo();
                     break;
                 case Keys.Up or Keys.W:
-                    Carro.Acelerando = false;
+                    Carro.Direcao.Acelerador.Acelerando = false;
                     IsUpPressed = false;
                     break;
                 case Keys.Down or Keys.S:
+                    Carro.Direcao.Acelerador.Desacelerando = false;
                     IsDownPressed = false;
                     break;
             }
@@ -72,10 +73,11 @@ namespace RaceIF
                     IsRightPressed = true;
                     break;
                 case Keys.Up or Keys.W:
-                    Carro.Acelerando = true;
+                    Carro.Direcao.Acelerador.Acelerando = true;
                     IsUpPressed = true;
                     break;
                 case Keys.Down or Keys.S:
+                    Carro.Direcao.Acelerador.Desacelerando = true;
                     IsDownPressed = true;
                     break;
             }

@@ -38,10 +38,10 @@
             // carBox
             // 
             this.carBox.Image = global::RaceIF.Properties.Resources.TAXI_CLEAN_ALLD0000;
-            this.carBox.Location = new System.Drawing.Point(50, 30);
+            this.carBox.Location = new System.Drawing.Point(38, 24);
             this.carBox.Margin = new System.Windows.Forms.Padding(0);
             this.carBox.Name = "carBox";
-            this.carBox.Size = new System.Drawing.Size(97, 53);
+            this.carBox.Size = new System.Drawing.Size(73, 43);
             this.carBox.TabIndex = 0;
             this.carBox.TabStop = false;
             // 
@@ -53,10 +53,11 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.carBox);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.ShowIcon = false;
             this.Text = "RaceIF";
@@ -65,6 +66,7 @@
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeyIsUp);
             ((System.ComponentModel.ISupportInitialize)(this.carBox)).EndInit();
             this.ResumeLayout(false);
+
         }
 
         private System.Windows.Forms.Timer gameTimer;
