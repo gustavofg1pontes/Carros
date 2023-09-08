@@ -12,26 +12,28 @@ namespace RaceIF
 {
     public class Acelerador
     {
-        //todo carro NÃO alterar direcao ao dar ré (quando dá ré, ele passa a acelerar para aquela direção, ficando "ao contrário")
         public bool Acelerando = false;
         public bool Desacelerando = false;
 
         public Acelerador()
         {
-
         }
 
         public Vector2 VetorVel = new(0, 0);
         public Vector2 VetorAceleracao = new(0, 0);
         public Vector2 VetorDesaceleracao = new(0, 0);
+        public Vector2 VetorTeste = new(0, 0);
 
         public void UpdateVetorVel(float angulo)
         {
             this.VetorVel = VectorUtils.AddAngles(VetorVel, angulo);
-            if (!Desacelerando && !Acelerando)
+            if (!Acelerando)
             {
                 this.VetorAceleracao.X = 0;
                 this.VetorAceleracao.Y = 0;
+            }
+            if (!Desacelerando)
+            {
                 this.VetorDesaceleracao.X = 0;
                 this.VetorDesaceleracao.Y = 0;
             }
@@ -42,6 +44,11 @@ namespace RaceIF
         public void UpdateVetorAceleracao(float angulo)
         {
             this.VetorAceleracao = VectorUtils.AddAngles(VetorAceleracao, angulo);
+        }
+
+        public void UpdateVetorDesaceleracao(float angulo)
+        {
+            this.VetorDesaceleracao = VectorUtils.AddAngles(VetorDesaceleracao, angulo);
         }
 
         public void Acelerar(float vel, float direcao)

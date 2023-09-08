@@ -5,17 +5,17 @@ namespace RaceIF;
 
 public static class VectorUtils
 {
-    
+
     public static Vector2 AddAngles(Vector2 vector2, float angle)
     {
         return ChangeAngle(vector2, AddAngles(AngleFromVector(vector2), angle));
     }
-    
+
     public static Vector2 SubtractAngles(Vector2 vector2, float angle)
     {
         return ChangeAngle(vector2, SubtractAngles(AngleFromVector(vector2), angle));
     }
-    
+
     public static Vector2 ChangeAngle(Vector2 vector, float newAngleDegrees)
     {
         float magnitude = vector.Length(); // Obtém a magnitude do vetor
@@ -29,13 +29,34 @@ public static class VectorUtils
 
         return new Vector2(x, y);
     }
-    
+
     public static float AngleFromVector(Vector2 vector)
     {
         double angleRadians = Math.Atan2(vector.Y, vector.X);
         double angleDegrees = angleRadians * (180.0 / Math.PI);
 
         return NormalizeAngle((float)angleDegrees);
+    }
+
+    public static float GetOppositeAngle(this Vector2 vector)
+    {
+        // Calculate the angle of the vector in radians
+        float angle = (float)Math.Atan2(vector.Y, vector.X);
+
+        // Calculate the opposite angle by adding or subtracting π radians (180 degrees)
+        float oppositeAngle = angle + (float)Math.PI;
+
+        // Ensure the angle is within the range [0, 2π) radians
+        if (oppositeAngle >= 2 * Math.PI)
+        {
+            oppositeAngle -= (float)(2 * Math.PI);
+        }
+        else if (oppositeAngle < 0)
+        {
+            oppositeAngle += (float)(2 * Math.PI);
+        }
+
+        return NormalizeAngle((float)(oppositeAngle  * 180 / Math.PI));
     }
 
     public static Vector2 VectorFromAngle(float angleDegrees)
@@ -49,7 +70,7 @@ public static class VectorUtils
 
         return new Vector2(x, y);
     }
-    
+
     public static Vector2 CreateVectorFromScalarAndAngle(float magnitude, float angleDegrees)
     {
         // Converte o ângulo para radianos
@@ -61,7 +82,7 @@ public static class VectorUtils
 
         return new Vector2(x, y);
     }
-    
+
     public static float CalculateMagnitude(Vector2 vector)
     {
         // Calcula a magnitude do vetor usando o teorema de Pitágoras
@@ -91,7 +112,7 @@ public static class VectorUtils
     public static Vector2 AddAngles(Vector2 vector1, Vector2 vector2)
     {
         // Converte os vetores em ângulos e realiza a adição
-        
+
         float angle1 = AngleFromVector(vector1);
         float angle2 = AngleFromVector(vector2);
 
@@ -109,5 +130,14 @@ public static class VectorUtils
         float resultAngle = SubtractAngles(angle1, angle2);
 
         return VectorFromAngle(resultAngle);
+    }
+
+    public static bool HasChangedDirection(Vector2 vector1, Vector2 vector2)
+    {
+        double dotProduct = 0;
+
+        dotProduct += Vector2.Dot(vector1, vector2);
+
+        return dotProduct < 0;
     }
 }

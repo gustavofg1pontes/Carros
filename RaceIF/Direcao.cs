@@ -8,10 +8,13 @@ namespace RaceIF
 {
     public class Direcao : ICarroComponente
     {
+        //todo VetorDirecao não mudar de direção ao dar ré
         private float _angulo;
         private bool _power;
 
-        public Vector2 VetorDirecao;
+
+        public Vector2 VetorVisao;
+        public bool isDandoRe { get; set; }
         public Acelerador Acelerador { get; }
         public Freio Freio { get; set; }
         public Cambio Cambio { get; set; }
@@ -26,7 +29,7 @@ namespace RaceIF
             Cambio = new Cambio();
             Acelerador = new Acelerador();
             Freio = new Freio();
-            VetorDirecao = VectorUtils.CreateVectorFromScalarAndAngle(1, 0);
+            VetorVisao = VectorUtils.CreateVectorFromScalarAndAngle(1, 0);
         }
 
         private Roda RodaFrontalDireita { get; set; }
@@ -65,13 +68,21 @@ namespace RaceIF
 
         public void AtualizarVetorDirecao()
         {
-            this.VetorDirecao = VectorUtils.CreateVectorFromScalarAndAngle(1, VectorUtils.AngleFromVector(this.Acelerador.VetorVel));
+            if (VectorUtils.HasChangedDirection(Acelerador.VetorVel, this.VetorVisao)){
+                this.VetorVisao = VectorUtils.CreateVectorFromScalarAndAngle(1, VectorUtils.GetOppositeAngle(this.Acelerador.VetorVel));
+                isDandoRe = true;
+            }
+            else
+            {
+                this.VetorVisao = VectorUtils.CreateVectorFromScalarAndAngle(1, VectorUtils.AngleFromVector(this.Acelerador.VetorVel));
+                isDandoRe = false;
+            }
         }
 
         public void Acelerar()
         {
             if (!_power) return;
-            Acelerador.Acelerar(1, VectorUtils.AngleFromVector(VetorDirecao));
+            Acelerador.Acelerar(1, VectorUtils.AngleFromVector(VetorVisao));
             Cambio.TrocarMarcha(VectorUtils.CalculateMagnitude(Acelerador.VetorVel));
         }
 
@@ -89,7 +100,7 @@ namespace RaceIF
         public void Frear(float vel)
         {
             Freio.Acionado = true;
-            Acelerador.Desacelerar(vel, VectorUtils.AngleFromVector(VetorDirecao));
+            Acelerador.Desacelerar(vel, VectorUtils.AngleFromVector(VetorVisao));
             
 
             Freio.Acionado = false;

@@ -24,11 +24,18 @@ namespace RaceIF
             }
             if (IsLeftPressed)
             {
-                Carro.Direcao.VirarAEsquerda(0.3f);
+                if(!Carro.Direcao.isDandoRe)
+                    Carro.Direcao.VirarAEsquerda(0.3f);
+                else 
+                    Carro.Direcao.VirarAEsquerda(-0.3f);
+
             }
             if (IsRightPressed)
             {
-                Carro.Direcao.VirarADireita(0.3f);
+                if (!Carro.Direcao.isDandoRe)
+                    Carro.Direcao.VirarADireita(0.3f);
+                else
+                    Carro.Direcao.VirarADireita(-0.3f);
             }
             if (IsDownPressed)
             {
@@ -37,6 +44,7 @@ namespace RaceIF
             carBox.Image = Carro.Update();
             carBox.Left = Carro.PosX;
             carBox.Top = Carro.PosY;
+            label1.Text = VectorUtils.AngleFromVector(Carro.Direcao.VetorVisao).ToString();
         }
 
         private void KeyIsUp(object sender, KeyEventArgs e)
