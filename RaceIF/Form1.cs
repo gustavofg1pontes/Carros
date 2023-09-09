@@ -42,9 +42,12 @@ namespace RaceIF
                 Carro.Direcao.Desacelerar();
             }
             carBox.Image = Carro.Update();
+            if (Carro.PosX < 0) Carro.PosX = 0;
+            else if(Carro.PosX + carBox.Image.Width > this.Width) Carro.PosX = this.Width - carBox.Image.Width;
+            if (Carro.PosY < 0) Carro.PosY = 0;
+            else if (Carro.PosY + carBox.Image.Height > this.Height) Carro.PosY = this.Height - carBox.Image.Height;
             carBox.Left = Carro.PosX;
             carBox.Top = Carro.PosY;
-            label1.Text = VectorUtils.AngleFromVector(Carro.Direcao.VetorVisao).ToString();
         }
 
         private void KeyIsUp(object sender, KeyEventArgs e)

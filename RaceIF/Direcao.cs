@@ -94,21 +94,13 @@ namespace RaceIF
                 Frear(.5f);
                 return;
             }
-            // todo ré
         }
 
         public void Frear(float vel)
         {
             Freio.Acionado = true;
             Acelerador.Desacelerar(vel, VectorUtils.AngleFromVector(VetorVisao));
-            
-
             Freio.Acionado = false;
-        }
-
-        public void Inercia()
-        {
-            Frear(1);
         }
 
         public float Angulo

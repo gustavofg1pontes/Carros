@@ -79,18 +79,15 @@ namespace RaceIF
 
         public Image Update()
         {
-            // por natureza o carro vai tender a ficar parado!
-
-            // if(!Acelerando) Direcao.Inercia();
             PosX += (int)(Direcao.Acelerador.VetorVel.X);
             PosY += (int)(Direcao.Acelerador.VetorVel.Y);
-
 
             Direcao.Acelerador.UpdateVetorAceleracao(Direcao.Angulo);
             Direcao.Acelerador.UpdateVetorDesaceleracao(Direcao.Angulo);
             Direcao.Acelerador.UpdateVetorVel(Direcao.Angulo);
 
             Direcao.AtualizarVetorDirecao();
+
 
             // calcular o sprite correto de acordo com a direção
             double ang = VectorUtils.AngleFromVector(Direcao.VetorVisao);
