@@ -30,20 +30,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.carBox = new System.Windows.Forms.PictureBox();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.carBox)).BeginInit();
             this.SuspendLayout();
-            // 
-            // carBox
-            // 
-            this.carBox.Image = global::RaceIF.Properties.Resources.TAXI_CLEAN_ALLD0000;
-            this.carBox.Location = new System.Drawing.Point(38, 24);
-            this.carBox.Margin = new System.Windows.Forms.Padding(0);
-            this.carBox.Name = "carBox";
-            this.carBox.Size = new System.Drawing.Size(73, 43);
-            this.carBox.TabIndex = 0;
-            this.carBox.TabStop = false;
             // 
             // gameTimer
             // 
@@ -53,25 +41,25 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
-            this.Controls.Add(this.carBox);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ClientSize = new System.Drawing.Size(1936, 921);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RaceIF";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyIsDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeyIsUp);
-            ((System.ComponentModel.ISupportInitialize)(this.carBox)).EndInit();
             this.ResumeLayout(false);
-
         }
 
         private System.Windows.Forms.Timer gameTimer;
-
-        private System.Windows.Forms.PictureBox carBox;
 
         #endregion
     }
