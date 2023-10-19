@@ -83,13 +83,6 @@ public static class VectorUtils
         return new Vector2(x, y);
     }
 
-    public static float CalculateMagnitude(Vector2 vector)
-    {
-        // Calcula a magnitude do vetor usando o teorema de Pitágoras
-        float magnitude = (float)Math.Sqrt(vector.X * vector.X + vector.Y * vector.Y);
-        return magnitude;
-    }
-
     public static float NormalizeAngle(float angle)
     {
         // Normaliza o ângulo para o intervalo de 0 a 360 graus

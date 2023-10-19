@@ -1,20 +1,20 @@
-﻿using System;
+﻿using RaceIF.Replay;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Numerics;
 
 namespace RaceIF
 {
-    public class Carro
+    public class Carro : IRecordable, IPresentable
     {
-        public static int Ticks = 0;
+        public static long Ticks = 0;
         public string Modelo;
         public string Fabricante;
         public int Ano;
         public bool Ligado;
         public Direcao Direcao { get; }
-        public int PosX;
-        public int PosY;
+        public int PosX {get; set;}
+        public int PosY { get; set; }
 
         public List<Image> Sprites = new()
         {
@@ -72,8 +72,8 @@ namespace RaceIF
         {
             Fabricante = fabricante;
             Modelo = modelo;
-            PosX = 50;
-            PosY = 60;
+            PosX = 200;
+            PosY = 115;
             Direcao = new Direcao();
         }
 
@@ -88,13 +88,15 @@ namespace RaceIF
 
             Direcao.AtualizarVetorDirecao();
 
+            Ticks++;
+            return Sprites[GetCurrentSprite()];
+        }
 
-            // calcular o sprite correto de acordo com a direção
+        private int GetCurrentSprite()
+        {
             double ang = VectorUtils.AngleFromVector(Direcao.VetorVisao);
             int supostoSprite = (int)Math.Round(ang / 7.5);
-            int sprite = supostoSprite > 47 ? 0 : supostoSprite;
-            Ticks++;
-            return Sprites[sprite];
+            return supostoSprite > 47 ? 0 : supostoSprite;
         }
 
         public void Start()
@@ -106,9 +108,34 @@ namespace RaceIF
 
         public void Stop()
         {
-            if (!Ligado || VectorUtils.CalculateMagnitude(Direcao.Acelerador.VetorVel) != 0 || Direcao.Cambio.MarchaIndex != 0) return;
+            if (!Ligado || Direcao.Acelerador.VetorVel.Length() != 0 || Direcao.Cambio.MarchaIndex != 0) return;
             Ligado = false;
             Direcao.Stop();
+        }
+
+        public IEntityState Record()
+        {
+            return new EntityView(PosX, PosY, GetCurrentSprite());
+        }
+
+        public Image Present(IEntityState state)
+        {
+            if (state is EntityView st)
+            {
+                PosX = st.PosX;
+                PosY = st.PosY;
+                return Sprites[st.SpriteIndex];
+            }
+            return null;
+        }
+
+
+        public void Reset()
+        {
+            Ticks = 0;
+            PosX = 200;
+            PosY = 115;
+            Direcao.Reset();
         }
     }
 }

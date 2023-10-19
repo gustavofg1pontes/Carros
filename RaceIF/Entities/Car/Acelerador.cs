@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Forms;
-using Newtonsoft.Json;
+﻿using System.Numerics;
 
 namespace RaceIF
 {
     public class Acelerador
     {
+        private readonly int velMax = 16;
         public bool Acelerando = false;
         public bool Desacelerando = false;
 
@@ -22,7 +15,11 @@ namespace RaceIF
         public Vector2 VetorVel = new(0, 0);
         public Vector2 VetorAceleracao = new(0, 0);
         public Vector2 VetorDesaceleracao = new(0, 0);
-        public Vector2 VetorTeste = new(0, 0);
+
+        public float GetVelocidade()
+        {
+            return VetorVel.Length();
+        }
 
         public void UpdateVetorVel(float angulo)
         {
@@ -37,7 +34,13 @@ namespace RaceIF
                 this.VetorDesaceleracao.X = 0;
                 this.VetorDesaceleracao.Y = 0;
             }
+
+            
             this.VetorVel += this.VetorAceleracao - this.VetorDesaceleracao;
+            if (this.VetorVel.Length() > velMax)
+            {
+                this.VetorVel = VectorUtils.CreateVectorFromScalarAndAngle(velMax, VectorUtils.AngleFromVector(this.VetorVel));
+            }
         }
 
 
@@ -59,6 +62,15 @@ namespace RaceIF
         public void Desacelerar(float vel, float direcao)
         {
             this.VetorDesaceleracao += VectorUtils.CreateVectorFromScalarAndAngle(vel, direcao);
+        }
+
+        public void Reset()
+        {
+            Acelerando = false;
+            Desacelerando = false;
+            VetorAceleracao = new(0, 0);
+            VetorDesaceleracao = new(0, 0);
+            VetorVel = new(0, 0);
         }
     }
 }

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace RaceIF
+﻿namespace RaceIF
 {
     public class Freio
     {
@@ -21,5 +15,9 @@ namespace RaceIF
             set => _acionado = value;
         }
 
+        public void Reset()
+        {
+            _acionado = false;
+        }
     }
 }

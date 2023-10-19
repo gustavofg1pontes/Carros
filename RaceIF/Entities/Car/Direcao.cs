@@ -1,8 +1,4 @@
-﻿using System;
-using System.Numerics;
-using System.Windows;
-using System.Windows.Forms;
-using Newtonsoft.Json;
+﻿using System.Numerics;
 
 namespace RaceIF
 {
@@ -14,7 +10,7 @@ namespace RaceIF
 
 
         public Vector2 VetorVisao;
-        public bool isDandoRe { get; set; }
+        public bool ReAtivada { get; set; }
         public Acelerador Acelerador { get; }
         public Freio Freio { get; set; }
         public Cambio Cambio { get; set; }
@@ -56,6 +52,14 @@ namespace RaceIF
             Angulo = 0;
         }
 
+        public void Reset()
+        {
+            Angulo = 0;
+            Acelerador.Reset();
+            Freio.Reset();
+            Cambio.Reset();
+        }
+
         public void Start()
         {
             _power = true;
@@ -70,20 +74,23 @@ namespace RaceIF
         {
             if (VectorUtils.HasChangedDirection(Acelerador.VetorVel, this.VetorVisao)){
                 this.VetorVisao = VectorUtils.CreateVectorFromScalarAndAngle(1, VectorUtils.GetOppositeAngle(this.Acelerador.VetorVel));
-                isDandoRe = true;
+                ReAtivada = true;
             }
             else
             {
                 this.VetorVisao = VectorUtils.CreateVectorFromScalarAndAngle(1, VectorUtils.AngleFromVector(this.Acelerador.VetorVel));
-                isDandoRe = false;
+                ReAtivada = false;
             }
         }
 
         public void Acelerar()
         {
             if (!_power) return;
-            Acelerador.Acelerar(1, VectorUtils.AngleFromVector(VetorVisao));
-            Cambio.TrocarMarcha(VectorUtils.CalculateMagnitude(Acelerador.VetorVel));
+            if (Acelerador.VetorAceleracao.Length() < 3)
+            {
+                Acelerador.Acelerar(0.5f, VectorUtils.AngleFromVector(VetorVisao));
+            }
+            Cambio.TrocarMarcha(Acelerador.VetorVel.Length());
         }
 
         public void Desacelerar()
