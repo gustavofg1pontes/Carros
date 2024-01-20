@@ -2,6 +2,10 @@
 
 Este é um aplicativo simples em Windows Forms que simula a física em 2D de um carro, permitindo controle de velocidade, direção e freio. O aplicativo foi desenvolvido em C# e utiliza a plataforma Windows Forms para criar uma interface gráfica amigável.
 
+### Apresentação gráfica
+
+<img src="https://www.dropbox.com/scl/fi/qfbpghyxk71h6hq2hpq8e/CarMovement.gif?rlkey=k03nos161k5wa0o2f6r3ez128&raw=1" alt="gif do carro se movimentando" />
+
 ## Funcionalidades
 
 - Controle de Velocidade
